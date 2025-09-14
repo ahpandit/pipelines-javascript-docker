@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ahpanditpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ahpanditpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ahpanditpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ahpanditpipelinesjavascriptdocker 
+          image: myconregis001.azurecr.io/ahpanditpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
